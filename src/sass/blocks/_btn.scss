@@ -1,0 +1,28 @@
+.btn {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    height: 8%;
+    border: none;
+    border-radius: 23px;
+    box-shadow: 17px 19px 37px -11px rgba(0, 0, 0, 0.25);
+    background-color: #ffffff;
+    font-family: Fira Sans;
+    font-size: 2vw;
+}
+
+.back {
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 1.2vw;
+    margin-left: 40px;
+    color: #858585;
+}
+
+.reset {
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: 1.3vw;
+    text-align: left;
+    color: #858585;   
+}

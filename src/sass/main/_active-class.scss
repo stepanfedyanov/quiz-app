@@ -1,0 +1,10 @@
+.on {
+    display: block;
+}
+
+.checked {
+    &::before {
+        content:url(../icons/check.svg);
+        background-color: #fd7373;
+    }
+}
