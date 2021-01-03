@@ -1,0 +1,26 @@
+.main {
+    display: none;
+    width: 100%;
+    height: 100%;
+    &__logo {
+        padding-top: 10%;
+        display: block;
+        margin: 0 auto;
+    }
+    &__title {
+        margin-bottom: 40px;
+        font-family: JOURNALISM;
+        font-size: 13vw;
+        text-align: center;
+        height: 13vw;
+    }
+    &__sub {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        font-family: Montserrat;
+        font-size: 1.5vw;
+        max-width: 50%;
+        text-align: center;
+    }
+}
