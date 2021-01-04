@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nfunction switchingScreen() {\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (switchingScreen);\n\n//# sourceURL=webpack:///./src/js/modules/switching.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nfunction switchingScreen() {\n    const main = document.querySelector('.main'),\n          quiz = document.querySelector('.quiz'),\n          triggerBtn = document.querySelector('.btn');\n    \n    triggerBtn.addEventListener('click', () => {\n        main.classList.remove('on');\n        quiz.classList.add('on');\n    });\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (switchingScreen);\n\n//# sourceURL=webpack:///./src/js/modules/switching.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction switchingScreen() {\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_switching__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/switching */ \"./src/js/modules/switching.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n    Object(_modules_switching__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_switching__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/switching */ \"./src/js/modules/switching.js\");\n\n\nObject(_modules_switching__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\nwindow.addEventListener('DOMContentLoaded', () => {\n    Object(_modules_switching__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 
