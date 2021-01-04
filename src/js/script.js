@@ -1,7 +1,17 @@
 import switchingScreen from './modules/switching';
 
-switchingScreen();
-
 window.addEventListener('DOMContentLoaded', () => {
-    switchingScreen();
+
+    switchingScreen({ // переключение на quiz
+        from: '.main',
+        to: '.quiz',
+        btn: '.btn'
+    });
+
+    switchingScreen({ // переключение на main
+        from: '.quiz',
+        to: '.main',
+        btn: '.back'
+    });
+
 });
