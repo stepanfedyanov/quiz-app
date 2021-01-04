@@ -1,11 +1,11 @@
-function switchingScreen() {
-    const main = document.querySelector('.main'),
-          quiz = document.querySelector('.quiz'),
-          triggerBtn = document.querySelector('.btn');
+function switchingScreen({from, to, btn}) {
+    const switchFrom = document.querySelector(from),
+          switchTo = document.querySelector(to),
+          triggerBtn = document.querySelector(btn);
     
     triggerBtn.addEventListener('click', () => {
-        main.classList.remove('on');
-        quiz.classList.add('on');
+        switchFrom.classList.remove('on');
+        switchTo.classList.add('on');
     });
 }
 
