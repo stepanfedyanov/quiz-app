@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/modules/generator.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/generator.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nfunction generate({question, answ1, answ2, answ3, answ4, trueAnswer}) {\n    class GuestionGenerator {\n        constructor(guestion, answ1, answ2, answ3, answ4, trueAnswer) {\n            this.guestion = question;\n            this.answers = [answ1, answ2, answ3, answ4];\n            this.trueAnswer = trueAnswer;\n        }\n        pasteQuestion() {\n            const questionBlock = document.querySelector('.quiz__question'),\n                  questionAnswers = document.querySelectorAll('.quiz__answ');\n            let i = 0;\n            \n            questionBlock.innerHTML = this.guestion;\n\n            questionAnswers.forEach(btn => {\n                if (this.answers[i] === this.trueAnswer) {\n                    btn.dataset.true = 1;\n                }\n                btn.innerHTML = this.answers[i];\n                i++;\n            });\n        }\n    }\n\n    new GuestionGenerator(question, answ1, answ2, answ3, answ4, trueAnswer)\n    .pasteQuestion();\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (generate);\n\n//# sourceURL=webpack:///./src/js/modules/generator.js?");
+
+/***/ }),
+
 /***/ "./src/js/modules/switching.js":
 /*!*************************************!*\
   !*** ./src/js/modules/switching.js ***!
@@ -106,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nfunction switchingScreen({fro
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_switching__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/switching */ \"./src/js/modules/switching.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n\n    Object(_modules_switching__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({ // переключение на quiz\n        from: '.main',\n        to: '.quiz',\n        btn: '.btn'\n    });\n\n    Object(_modules_switching__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({ // переключение на main\n        from: '.quiz',\n        to: '.main',\n        btn: '.back'\n    });\n\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_switching__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/switching */ \"./src/js/modules/switching.js\");\n/* harmony import */ var _modules_generator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/generator */ \"./src/js/modules/generator.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', () => {\n\n    const nextBtn = document.querySelector('.quiz__next');\n\n    Object(_modules_generator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({\n        question: `Проверка`,\n        answ1: 'Ответ 1',\n        answ2: 'Ответ 2',\n        answ3: 'Ответ 3',\n        answ4: 'Ответ 4',\n        trueAnswer: 'Ответ 1'\n    });\n\n    nextBtn.addEventListener('click', () => {\n        Object(_modules_generator__WEBPACK_IMPORTED_MODULE_1__[\"default\"])({\n            question: `Проверка кнопки`,\n            answ1: 'Ответ 1',\n            answ2: 'Ответ 2',\n            answ3: 'Ответ 3',\n            answ4: 'Ответ 4',\n            trueAnswer: 'Ответ 1'\n        });\n    });\n\n    Object(_modules_switching__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({ // переключение на quiz\n        from: '.main',\n        to: '.quiz',\n        btn: '.btn'\n    });\n\n    Object(_modules_switching__WEBPACK_IMPORTED_MODULE_0__[\"default\"])({ // переключение на main\n        from: '.quiz',\n        to: '.main',\n        btn: '.back'\n    });\n\n\n\n});\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ })
 

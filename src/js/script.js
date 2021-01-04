@@ -1,6 +1,29 @@
 import switchingScreen from './modules/switching';
+import generate from './modules/generator';
 
 window.addEventListener('DOMContentLoaded', () => {
+
+    const nextBtn = document.querySelector('.quiz__next');
+
+    generate({
+        question: `Проверка`,
+        answ1: 'Ответ 1',
+        answ2: 'Ответ 2',
+        answ3: 'Ответ 3',
+        answ4: 'Ответ 4',
+        trueAnswer: 'Ответ 1'
+    });
+
+    nextBtn.addEventListener('click', () => {
+        generate({
+            question: `Проверка кнопки`,
+            answ1: 'Ответ 1',
+            answ2: 'Ответ 2',
+            answ3: 'Ответ 3',
+            answ4: 'Ответ 4',
+            trueAnswer: 'Ответ 1'
+        });
+    });
 
     switchingScreen({ // переключение на quiz
         from: '.main',
@@ -13,5 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
         to: '.main',
         btn: '.back'
     });
+
+
 
 });
