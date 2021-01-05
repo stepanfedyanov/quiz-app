@@ -3,7 +3,39 @@ import generate from './modules/generator';
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    const questions = [
+        {
+            question: 'Вопрос 1',
+            answ1: 'Правильный ответ',
+            answ2: 'Неверный ответ',
+            answ3: 'Неверный ответ',
+            answ4: 'Неверный ответ'
+        },
+        {
+            question: 'Вопрос 2',
+            answ1: 'Неверный ответ',
+            answ2: 'Правильный ответ',
+            answ3: 'Неверный ответ',
+            answ4: 'Неверный ответ'
+        },
+        {
+            question: 'Вопрос 3',
+            answ1: 'Неверный ответ',
+            answ2: 'Неверный ответ',
+            answ3: 'Правильный ответ',
+            answ4: 'Неверный ответ'
+        },
+        {
+            question: 'Вопрос 4',
+            answ1: 'Неверный ответ',
+            answ2: 'Неверный ответ',
+            answ3: 'Неверный ответ',
+            answ4: 'Правильный ответ'
+        }
+    ];
+
     const nextBtn = document.querySelector('.quiz__next');
+    
 
     generate({
         question: `Проверка`,
