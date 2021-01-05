@@ -11,8 +11,9 @@ function generate({question, answ1, answ2, answ3, answ4, trueAnswer}) {
             let i = 0;
             
             questionBlock.innerHTML = this.guestion;
-
+            
             questionAnswers.forEach(btn => {
+                btn.dataset.true = '';
                 if (this.answers[i] === this.trueAnswer) {
                     btn.dataset.true = 1;
                 }
