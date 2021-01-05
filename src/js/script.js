@@ -1,60 +1,49 @@
 import switchingScreen from './modules/switching';
-import generate from './modules/generator';
+import generationQuiz from './modules/generation';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const questions = [
+    const nextBtn = document.querySelector('.quiz__next');
+    const questionsArray = [
         {
             question: 'Вопрос 1',
-            answ1: 'Правильный ответ',
+            answ1: 'Верный ответ',
             answ2: 'Неверный ответ',
             answ3: 'Неверный ответ',
-            answ4: 'Неверный ответ'
+            answ4: 'Неверный ответ',
+            trueAnswer: 'Верный ответ'
         },
         {
             question: 'Вопрос 2',
             answ1: 'Неверный ответ',
-            answ2: 'Правильный ответ',
+            answ2: 'Верный ответ',
             answ3: 'Неверный ответ',
-            answ4: 'Неверный ответ'
+            answ4: 'Неверный ответ',
+            trueAnswer: 'Верный ответ'
         },
         {
             question: 'Вопрос 3',
             answ1: 'Неверный ответ',
             answ2: 'Неверный ответ',
-            answ3: 'Правильный ответ',
-            answ4: 'Неверный ответ'
+            answ3: 'Верный ответ',
+            answ4: 'Неверный ответ',
+            trueAnswer: 'Верный ответ'
         },
         {
             question: 'Вопрос 4',
             answ1: 'Неверный ответ',
             answ2: 'Неверный ответ',
             answ3: 'Неверный ответ',
-            answ4: 'Правильный ответ'
+            answ4: 'Верный ответ',
+            trueAnswer: 'Верный ответ'
         }
     ];
 
-    const nextBtn = document.querySelector('.quiz__next');
-    
-
-    generate({
-        question: `Проверка`,
-        answ1: 'Ответ 1',
-        answ2: 'Ответ 2',
-        answ3: 'Ответ 3',
-        answ4: 'Ответ 4',
-        trueAnswer: 'Ответ 1'
-    });
-
-    nextBtn.addEventListener('click', () => {
-        generate({
-            question: `Проверка кнопки`,
-            answ1: 'Ответ 1',
-            answ2: 'Ответ 2',
-            answ3: 'Ответ 3',
-            answ4: 'Ответ 4',
-            trueAnswer: 'Ответ 1'
-        });
+    generationQuiz({ // активация генератора вопроса
+        selectorTrig: '.trig-btn', // кнопка, после которой будет генерация
+        questionsArr: questionsArray, // массив с вопросами
+        selectorBar: '.quiz__bar-progress', // прогресс бар, который меняется
+        resetSelector: '.back'
     });
 
     switchingScreen({ // переключение на quiz
