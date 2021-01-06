@@ -1,9 +1,11 @@
 import switchingScreen from './modules/switching';
 import generationQuiz from './modules/generation';
+import countScore from './modules/score';
 
 window.addEventListener('DOMContentLoaded', () => {
 
     const nextBtn = document.querySelector('.quiz__next');
+    const answBtns = document.querySelectorAll('.quiz__answ');
     const questionsArray = [
         {
             question: 'Вопрос 1',
@@ -39,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    
+
     generationQuiz({ // активация генератора вопроса
         selectorTrig: '.trig-btn', // кнопка, после которой будет генерация
         questionsArr: questionsArray, // массив с вопросами
@@ -58,6 +62,9 @@ window.addEventListener('DOMContentLoaded', () => {
         btn: '.back'
     });
 
+    countScore();
+
+    
 
 
 });

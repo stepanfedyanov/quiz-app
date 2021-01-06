@@ -1,4 +1,5 @@
 import generate from './generator';
+import {score} from './score';
 
 function generationQuiz({
     selectorTrig, questionsArr, selectorBar, resetSelector}) {
@@ -29,7 +30,11 @@ function generationQuiz({
                 });
                 progressBar.style.width = `${100/questions.length * i + 100/questions.length}%`;
                 i++;
-            }    
+            }
+
+            if (i+1 > questions.length) {
+                document.querySelector('.quiz__block').innerHTML = score;
+            }
         });
     });
 }
