@@ -1,0 +1,17 @@
+@media (orientation: portrait) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+    }
+    .warning {
+        font-family: JOURNALISM;
+        font-size: 10vw;
+        margin-top: 50%;
+        display: block;
+        text-align: center;
+    }
+    .wrapper {
+        display: none;
+    }
+  }

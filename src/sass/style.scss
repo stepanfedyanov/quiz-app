@@ -1,6 +1,10 @@
 @import 'main/bootstrap-reboot.min';
 @import 'main/_fonts';
 
+.warning {
+    display: none;
+}
+
 html, body {
     width: 100%;
     height: 100%;
