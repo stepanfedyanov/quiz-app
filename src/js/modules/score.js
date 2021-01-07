@@ -1,8 +1,8 @@
 let score = 0;
 
-function countScore() {
-    const answersBlocks = document.querySelectorAll('.quiz__answ');
-    const nextBtn = document.querySelector('.quiz__next');
+function countScore({answersSelector, nextBtnSelector}) {
+    const answersBlocks = document.querySelectorAll(answersSelector);
+    const nextBtn = document.querySelector(nextBtnSelector);
 
     function checkBtn(btn) {
         answersBlocks.forEach(btn => unCheckBtn(btn));
@@ -10,7 +10,6 @@ function countScore() {
         nextBtn.classList.add('on');
         if (btn.dataset.true == 1) {
             score++;
-            console.log(score);
         }
     }
 
@@ -18,7 +17,6 @@ function countScore() {
         if (btn.classList.contains('checked')) {
             if (btn.dataset.true == 1) {
                 score--;
-                console.log(score);
             }
         }
         btn.classList.remove('checked');
@@ -37,8 +35,10 @@ function countScore() {
     });
 
     nextBtn.addEventListener('click', () => {
-        answersBlocks.forEach(btn => btn.classList.remove('checked'));
-        console.log(score);
+        answersBlocks.forEach(btn => {
+            btn.classList.remove('checked');
+            nextBtn.classList.remove('on');
+        });
     });
 
 }

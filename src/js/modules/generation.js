@@ -1,13 +1,15 @@
 import generate from './generator';
+import addFinshScreen from './finish';
 import {score} from './score';
 
 function generationQuiz({
-    selectorTrig, questionsArr, selectorBar, resetSelector}) {
+    selectorTrig, questionsArr, selectorBar, resetSelector, blockSelector}) {
 
     const questions = questionsArr;
     const triggerBtns = document.querySelectorAll(selectorTrig);
     const progressBar = document.querySelector(selectorBar);
     const resetBtn = document.querySelector(resetSelector);
+    const quizBlock = document.querySelector(blockSelector);
 
     let i = 0;
 
@@ -30,10 +32,12 @@ function generationQuiz({
                 });
                 progressBar.style.width = `${100/questions.length * i + 100/questions.length}%`;
                 i++;
-            }
-
-            if (i+1 > questions.length) {
-                document.querySelector('.quiz__block').innerHTML = score;
+            } else {
+                document.querySelector('.quiz__question').innerHTML = 'Загрузка';
+                quizBlock.innerHTML = `
+                <img src="icons/load.gif" class="quiz__loader">
+                <p class="quiz__loader-text">Подождите, загрузка</p>`;
+                setTimeout(addFinshScreen, 3000, score);
             }
         });
     });

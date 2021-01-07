@@ -38,6 +38,14 @@ window.addEventListener('DOMContentLoaded', () => {
             answ3: 'Неверный ответ',
             answ4: 'Верный ответ',
             trueAnswer: 'Верный ответ'
+        },
+        {
+            question: 'Вопрос 5',
+            answ1: 'Неверный ответ',
+            answ2: 'Неверный ответ',
+            answ3: 'Неверный ответ',
+            answ4: 'Верный ответ',
+            trueAnswer: 'Верный ответ'
         }
     ];
 
@@ -47,7 +55,8 @@ window.addEventListener('DOMContentLoaded', () => {
         selectorTrig: '.trig-btn', // кнопка, после которой будет генерация
         questionsArr: questionsArray, // массив с вопросами
         selectorBar: '.quiz__bar-progress', // прогресс бар, который меняется
-        resetSelector: '.back'
+        resetSelector: '.back', // reset btn
+        blockSelector: '.quiz__block' // блок с вопросами
     });
 
     switchingScreen({ // переключение на quiz
@@ -62,9 +71,13 @@ window.addEventListener('DOMContentLoaded', () => {
         btn: '.back'
     });
 
-    countScore();
+    document.querySelector('.reset').addEventListener('click', () => {
+        window.location.reload();
+    });
 
-    
 
-
+    countScore({
+        answersSelector: '.quiz__answ',
+        nextBtnSelector: '.quiz__next'
+    });
 });

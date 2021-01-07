@@ -78,4 +78,15 @@
         color: #858585; 
         text-align: center;
     }
+    &__loader {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        margin-bottom: 20px;
+        &-text {
+            font-family: Montserrat;
+            font-size: 1.3vw;
+            text-align: center;
+        }
+    }
 }
