@@ -1,0 +1,20 @@
+.fade {
+    animation: opac 0.8s;
+    animation-duration: 0.8s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: opac;
+}
+
+@keyframes opac {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

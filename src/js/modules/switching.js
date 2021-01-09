@@ -4,8 +4,8 @@ function switchingScreen({from, to, btn}) {
           triggerBtn = document.querySelector(btn);
     
     triggerBtn.addEventListener('click', () => {
-        switchFrom.classList.remove('on');
-        switchTo.classList.add('on');
+        switchFrom.classList.remove('on', 'fade');
+        switchTo.classList.add('on', 'fade');
     });
 }
 

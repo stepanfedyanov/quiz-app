@@ -7,7 +7,7 @@ function countScore({answersSelector, nextBtnSelector}) {
     function checkBtn(btn) {
         answersBlocks.forEach(btn => unCheckBtn(btn));
         btn.classList.add('checked');
-        nextBtn.classList.add('on');
+        nextBtn.classList.add('on', 'fade');
         if (btn.dataset.true == 1) {
             score++;
         }
@@ -38,6 +38,7 @@ function countScore({answersSelector, nextBtnSelector}) {
         answersBlocks.forEach(btn => {
             btn.classList.remove('checked');
             nextBtn.classList.remove('on');
+            
         });
     });
 
