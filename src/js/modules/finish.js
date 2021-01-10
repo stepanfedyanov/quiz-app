@@ -9,15 +9,18 @@ function addFinshScreen(score) {
     title.innerHTML = `Твоя оценка - ${score}`;
 
     if (+score < 3) {
-        sub.innerHTML = `К сожалению, вы не прошли тест. Повторите материал и повторите`;
+        finishScreen.classList.add('fade');
+        sub.innerHTML = `К сожалению, вы не прошли тест. Повторите материал и попробуйте снова`;
     }
 
     if (+score > 3) {
-        sub.innerHTML = `Вы знаете эту тему, но пробелы в знаниях присутвуют.`;
+        finishScreen.classList.add('fade');
+        sub.innerHTML = `Вы знаете этуи тему, но пробелы в знаниях присутвуют.`;
     }
 
     if (+score === 5) {
-        sub.innerHTML = `Вы отлично знаете тему!`;
+        finishScreen.classList.add('fade');
+        sub.innerHTML = `Вы отлично знаете темы!`;
     }
      
 }
