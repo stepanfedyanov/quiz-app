@@ -77,6 +77,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     countScore({
+        nOfQuiestions: questionsArray.length,
         answersSelector: '.quiz__answ',
         nextBtnSelector: '.quiz__next'
     });

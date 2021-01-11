@@ -14,4 +14,14 @@
     .wrapper {
         display: none;
     }
-  }
+}
+
+@media (max-width: 785px) {
+    .main__figure {
+        svg {
+            bottom: 0%;
+            height: 50px;
+            width: 50px;
+        }
+    }
+}

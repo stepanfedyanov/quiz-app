@@ -15,7 +15,7 @@ function addFinshScreen(score) {
 
     if (+score > 3) {
         finishScreen.classList.add('fade');
-        sub.innerHTML = `Вы знаете этуи тему, но пробелы в знаниях присутвуют.`;
+        sub.innerHTML = `Вы хорошо знаете математику, но пробелы в знаниях присутствуют.`;
     }
 
     if (+score === 5) {
