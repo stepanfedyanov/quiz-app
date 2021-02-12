@@ -22,7 +22,7 @@
         width: 60%;
         height: 55%;
         border-radius: 18px;
-        box-shadow: 17px 18px 37px -11px rgba(0, 0, 0, 0.25);
+        border: 1px solid #000;
         background-color: #fffdfd;
     }
     &__up-block {
@@ -48,7 +48,7 @@
             width: 20%;
             height: 8px;
             border-radius: 18px;
-            background-color: #fd7373;
+            background-color: #f30000;
         }
     }
     &__answ {
@@ -67,7 +67,7 @@
             border-radius: 100%;
             background-color: #ffffff;
             &:hover {
-                background-color: #fd7373;
+                background-color: #ff0000;
             }
         }
         &-wrapper {
