@@ -3,7 +3,7 @@ import addFinshScreen from './finish';
 import {score} from './score';
 
 function generationQuiz({
-    selectorTrig, questionsArr, selectorBar, resetSelector, blockSelector}) {
+    selectorTrig, questionsArr, selectorBar, resetSelector, blockSelector, nOfQuiestions}) {
 
     const questions = questionsArr;
     const triggerBtns = document.querySelectorAll(selectorTrig);
@@ -37,7 +37,7 @@ function generationQuiz({
                 quizBlock.innerHTML = `
                 <img src="icons/load.gif" class="quiz__loader">
                 <p class="quiz__loader-text">Подождите, загрузка</p>`;
-                setTimeout(addFinshScreen, 3000, score);
+                setTimeout(addFinshScreen, 3000, score, nOfQuiestions);
             }
         });
     });

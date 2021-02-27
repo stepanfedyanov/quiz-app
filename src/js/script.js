@@ -56,7 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
         questionsArr: questionsArray, // массив с вопросами
         selectorBar: '.quiz__bar-progress', // прогресс бар, который меняется
         resetSelector: '.back', // reset btn
-        blockSelector: '.quiz__block' // блок с вопросами
+        blockSelector: '.quiz__block', // блок с вопросами
+        nOfQuiestions: questionsArray.length 
     });
 
     switchingScreen({ // переключение на quiz
@@ -77,7 +78,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     countScore({
-        nOfQuiestions: questionsArray.length,
         answersSelector: '.quiz__answ',
         nextBtnSelector: '.quiz__next'
     });

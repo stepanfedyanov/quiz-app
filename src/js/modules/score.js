@@ -1,6 +1,6 @@
 let score = 0;
 
-function countScore({nOfQuiestions ,answersSelector, nextBtnSelector}) {
+function countScore({answersSelector, nextBtnSelector}) {
     const answersBlocks = document.querySelectorAll(answersSelector);
     const nextBtn = document.querySelector(nextBtnSelector);
 
@@ -41,27 +41,6 @@ function countScore({nOfQuiestions ,answersSelector, nextBtnSelector}) {
             
         });
     });
-
-    // if ((nOfQuiestions / score) > 2) {
-    //     score = 2;
-    //     console.log(score);
-    // }
-
-    // if ((nOfQuiestions / score) <= 2) {
-    //     score = 3;
-    //     console.log(score);
-    // }
-
-    // if ((nOfQuiestions / score) <= 1.25) {
-    //     score = 4;
-    //     console.log(score);
-    // }
-
-    // if ((nOfQuiestions / score) === 1 ) {
-    //     score = 5;
-    //     console.log(score);
-    // }
-
 }
 
 export {score};

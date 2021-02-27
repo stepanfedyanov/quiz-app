@@ -4,7 +4,9 @@
 
 .checked {
     &::before {
-        content:url(../icons/check.svg);
+        background-image: url(../icons/check.svg);
         background-color: #ff0000;
+        width: 20px;
+        height: 20px;
     }
 }
